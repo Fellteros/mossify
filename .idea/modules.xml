@@ -5,8 +5,10 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/mossify.common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/mossify.common.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/mossify.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common/mossify.common.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/mossify.common.test.iml" filepath="$PROJECT_DIR$/.idea/modules/common/mossify.common.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/mossify.fabric.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/mossify.fabric.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/mossify.fabric.main.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/mossify.fabric.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/mossify.fabric.test.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/mossify.fabric.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/neoforge/mossify.neoforge.iml" filepath="$PROJECT_DIR$/.idea/modules/neoforge/mossify.neoforge.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/neoforge/mossify.neoforge.main.iml" filepath="$PROJECT_DIR$/.idea/modules/neoforge/mossify.neoforge.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/neoforge/mossify.neoforge.test.iml" filepath="$PROJECT_DIR$/.idea/modules/neoforge/mossify.neoforge.test.iml" />
     </modules>

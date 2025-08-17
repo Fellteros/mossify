@@ -1,7 +1,6 @@
 package net.fellter.mossify.mixin;
 
 import net.fellter.mossify.MossifiableBlockRegistry;
-import net.fellter.mossify.Mossify;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
@@ -32,7 +31,11 @@ public abstract class MixinBlockItem {
 				if (playerEntity.isSneaking()) {
 					playerEntity.swingHand(context.getHand());
 					context.getStack().decrementUnlessCreative(1, playerEntity);
-					world.setBlockState(pos, MossifiableBlockRegistry.BLOCK_MAP.get(state.getBlock()).getStateWithProperties(state));
+
+					BlockState mossy = MossifiableBlockRegistry.BLOCK_MAP.get(state.getBlock()).getStateWithProperties(state);
+
+					world.setBlockState(pos, mossy);
+					world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(playerEntity, mossy));
 					cir.setReturnValue(ActionResult.SUCCESS);
 				}
 			}

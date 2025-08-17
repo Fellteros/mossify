@@ -1,7 +1,7 @@
 modLoader = "javafml"
 loaderVersion = "[2,)"
-#issueTrackerURL = ""
-license = "All Rights Reserved"
+issueTrackerURL = "https://github.com/Fellteros/mossify/issues"
+license = "CC BY-SA 4.0"
 
 [[mods]]
 modId = "mossify"
@@ -9,9 +9,9 @@ version = "${version}"
 displayName = "Mossify"
 authors = "Fellter"
 description = '''
-
+'Mossify' blocks with moss blocks and scrape it with an axe
 '''
-#logoFile = ""
+logoFile = "assets/mossify/icon.png"
 
 [[dependencies.mossify]]
 modId = "neoforge"

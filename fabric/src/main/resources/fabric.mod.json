@@ -3,14 +3,16 @@
   "id": "mossify",
   "version": "${version}",
   "name": "Mossify",
-  "description": "",
+  "description": "'Mossify' blocks with moss blocks and scrape it with an axe",
   "authors": [
     "Fellter"
   ],
   "contact": {
-    "homepage": ""
+    "homepage": "",
+    "issues": "https://github.com/Fellteros/mossify/issues",
+    "sources": "https://github.com/Fellteros/mossify"
   },
-  "license": "All-Rights-Reserved",
+  "license": "CC BY-SA 4.0",
   "icon": "assets/mossify/icon.png",
   "environment": "*",
   "entrypoints": {
