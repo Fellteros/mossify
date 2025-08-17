@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "mossify",
+  "version": "${version}",
+  "name": "Mossify",
+  "description": "",
+  "authors": [
+    "Fellter"
+  ],
+  "contact": {
+    "homepage": ""
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/mossify/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.fellter.mossify.fabric.MossifyFabric"
+    ],
+    "client": [
+      "net.fellter.mossify.fabric.client.MossifyFabricClient"
+    ]
+  },
+  "mixins": [
+    "mossify.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.17.2",
+    "minecraft": "~1.21.8",
+    "java": ">=21",
+    "architectury": ">=17.0.8",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

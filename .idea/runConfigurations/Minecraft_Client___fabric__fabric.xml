@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" factoryName="Application" name="Minecraft Client (:fabric)" type="Application">
+    <option name="MAIN_CLASS_NAME" value="dev.architectury.transformer.TransformerRuntime"/>
+    <module name="mossify.fabric.main"/>
+    <option name="PROGRAM_PARAMETERS" value="-XX:+AllowEnhancedClassRedefinition"/>
+    <shortenClasspath name="ARGS_FILE"/>
+    <option name="VM_PARAMETERS" value="-Dfabric.dli.config=C:\Users\alois\Other\projects\Mossify\fabric\.gradle\loom-cache\launch.cfg -Dfabric.dli.env=client -Dfabric.dli.main=net.fabricmc.loader.impl.launch.knot.KnotClient -Darchitectury.main.class=C:\Users\alois\Other\projects\Mossify\fabric\.gradle\architectury\.main_class -Darchitectury.runtime.transformer=C:\Users\alois\Other\projects\Mossify\fabric\.gradle\architectury\.transforms -Darchitectury.properties=C:\Users\alois\Other\projects\Mossify\fabric\.gradle\architectury\.properties -Djdk.attach.allowAttachSelf=true -javaagent:C:\Users\alois\Other\projects\Mossify\.gradle\architectury\architectury-transformer-agent.jar -javaagent:C:\Users\alois\.gradle\caches\modules-2\files-2.1\net.fabricmc\sponge-mixin\0.16.3+mixin.0.8.7\3e535042688d1265447e52ad86950b7d9678a5fa\sponge-mixin-0.16.3+mixin.0.8.7.jar"/>
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fabric/run/"/>
+    <method v="2">
+      <option enabled="true" name="Make"/>
+    </method>
+  <classpathModifications/></configuration>
+</component>

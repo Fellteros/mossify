@@ -1,0 +1,26 @@
+pluginManagement {
+    repositories {
+        maven { url "https://maven.fabricmc.net/" }
+        maven { url "https://maven.architectury.dev/" }
+        maven { url "https://files.minecraftforge.net/maven/" }
+        gradlePluginPortal()
+        maven {url "https://maven.kikugie.dev/snapshots"}
+    }
+}
+
+plugins {
+    id("dev.kikugie.stonecutter") version "0.7.8"
+}
+
+stonecutter {
+    kotlinController = false
+    centralScript = "build.gradle"
+
+    // Subproject configuration
+}
+
+rootProject.name = 'mossify'
+
+include 'common'
+include 'fabric'
+include 'neoforge'

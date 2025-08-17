@@ -1,0 +1,326 @@
+---- Minecraft Crash Report ----
+// I'm sorry, Dave.
+
+Time: 2025-08-16 18:29:09
+Description: Bootstrap
+
+java.lang.RuntimeException: org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: An unexpected critical error was encountered
+	at MC-BOOTSTRAP/fml_loader@9.0.16/net.neoforged.fml.loading.BackgroundWaiter.runAndTick(BackgroundWaiter.java:29) ~[loader-9.0.16.jar%23120!/:9.0] {}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.client.main.Main.main(Main.java:126) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/net.neoforged.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:132) ~[loader-9.0.16.jar%23120!/:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/net.neoforged.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:120) ~[loader-9.0.16.jar%23120!/:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/net.neoforged.fml.loading.targets.NeoForgeClientDevLaunchHandler.runService(NeoForgeClientDevLaunchHandler.java:49) ~[loader-9.0.16.jar%23120!/:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/net.neoforged.fml.loading.targets.CommonLaunchHandler.lambda$launchService$4(CommonLaunchHandler.java:114) ~[loader-9.0.16.jar%23120!/:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:25) [loader-9.0.16.jar%23120!/:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:55) [loader-9.0.16.jar%23120!/:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:73) [loader-9.0.16.jar%23120!/:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/cpw.mods.modlauncher.Launcher.run(Launcher.java:104) [loader-9.0.16.jar%23120!/:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/cpw.mods.modlauncher.Launcher.main(Launcher.java:75) [loader-9.0.16.jar%23120!/:9.0] {}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:203) [bootstraplauncher-9.0.16.jar:9.0] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:62) [bootstraplauncher-9.0.16.jar:9.0] {}
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) [dev-launch-injector-0.2.1+build.8.jar:?] {}
+	at dev.architectury.transformer.TransformerRuntime.main(TransformerRuntime.java:220) [architectury-transformer-5.2.87-runtime.jar:5.2.87] {}
+Caused by: org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: An unexpected critical error was encountered
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:392) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:250) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.service.modlauncher.MixinTransformationHandler.processClass(MixinTransformationHandler.java:131) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.launch.MixinLaunchPluginLegacy.processClass(MixinLaunchPluginLegacy.java:131) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/cpw.mods.modlauncher.serviceapi.ILaunchPluginService.processClassWithFlags(ILaunchPluginService.java:152) ~[loader-9.0.16.jar:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/cpw.mods.modlauncher.LaunchPluginHandler.offerClassNodeToPlugins(LaunchPluginHandler.java:97) ~[loader-9.0.16.jar:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:133) ~[loader-9.0.16.jar:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/cpw.mods.modlauncher.TransformingClassLoader.maybeTransformClassBytes(TransformingClassLoader.java:54) ~[loader-9.0.16.jar:9.0] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.readerToClass(ModuleClassLoader.java:202) ~[securejarhandler-9.0.16.jar:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.lambda$findClass$20(ModuleClassLoader.java:310) ~[securejarhandler-9.0.16.jar:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.loadFromModule(ModuleClassLoader.java:323) ~[securejarhandler-9.0.16.jar:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.findClass(ModuleClassLoader.java:310) ~[securejarhandler-9.0.16.jar:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.loadClass(ModuleClassLoader.java:226) ~[securejarhandler-9.0.16.jar:?] {}
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?] {}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.block.LightBlock.getOutlineShape(LightBlock.java:65) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.block.AbstractBlock$AbstractBlockState.getOutlineShape(AbstractBlock.java:677) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A,re:mixin,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.block.AbstractBlock$AbstractBlockState.getOutlineShape(AbstractBlock.java:673) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A,re:mixin,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.block.AbstractBlock.getCollisionShape(AbstractBlock.java:322) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:computing_frames,pl:accesstransformer:B,pl:unprotect:A,re:mixin,pl:accesstransformer:B,pl:unprotect:A,re:classloading,pl:accesstransformer:B,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.block.AbstractBlock$AbstractBlockState$ShapeCache.<init>(AbstractBlock.java:945) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.block.AbstractBlock$AbstractBlockState.initShapeCache(AbstractBlock.java:503) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A,re:mixin,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.block.Blocks.<clinit>(Blocks.java:7052) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.block.FireBlock.registerDefaultFlammables(FireBlock.java:331) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.Bootstrap.initialize(Bootstrap.java:50) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.client.main.Main.lambda$main$0(Main.java:126) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A}
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?] {}
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?] {}
+Caused by: org.spongepowered.asm.mixin.throwables.MixinApplyError: Mixin [mossify.mixins.json:MixinAxeItem from mod mossify] from phase [DEFAULT] in config [mossify.mixins.json] FAILED during APPLY
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinError(MixinProcessor.java:638) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinApplyError(MixinProcessor.java:589) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:379) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:250) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.service.modlauncher.MixinTransformationHandler.processClass(MixinTransformationHandler.java:131) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.launch.MixinLaunchPluginLegacy.processClass(MixinLaunchPluginLegacy.java:131) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/cpw.mods.modlauncher.serviceapi.ILaunchPluginService.processClassWithFlags(ILaunchPluginService.java:152) ~[loader-9.0.16.jar:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/cpw.mods.modlauncher.LaunchPluginHandler.offerClassNodeToPlugins(LaunchPluginHandler.java:97) ~[loader-9.0.16.jar:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:133) ~[loader-9.0.16.jar:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/cpw.mods.modlauncher.TransformingClassLoader.maybeTransformClassBytes(TransformingClassLoader.java:54) ~[loader-9.0.16.jar:9.0] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.readerToClass(ModuleClassLoader.java:202) ~[securejarhandler-9.0.16.jar:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.lambda$findClass$20(ModuleClassLoader.java:310) ~[securejarhandler-9.0.16.jar:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.loadFromModule(ModuleClassLoader.java:323) ~[securejarhandler-9.0.16.jar:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.findClass(ModuleClassLoader.java:310) ~[securejarhandler-9.0.16.jar:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.loadClass(ModuleClassLoader.java:226) ~[securejarhandler-9.0.16.jar:?] {}
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?] {}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.block.LightBlock.getOutlineShape(LightBlock.java:65) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.block.AbstractBlock$AbstractBlockState.getOutlineShape(AbstractBlock.java:677) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A,re:mixin,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.block.AbstractBlock$AbstractBlockState.getOutlineShape(AbstractBlock.java:673) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A,re:mixin,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.block.AbstractBlock.getCollisionShape(AbstractBlock.java:322) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:computing_frames,pl:accesstransformer:B,pl:unprotect:A,re:mixin,pl:accesstransformer:B,pl:unprotect:A,re:classloading,pl:accesstransformer:B,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.block.AbstractBlock$AbstractBlockState$ShapeCache.<init>(AbstractBlock.java:945) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.block.AbstractBlock$AbstractBlockState.initShapeCache(AbstractBlock.java:503) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A,re:mixin,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.block.Blocks.<clinit>(Blocks.java:7052) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.block.FireBlock.registerDefaultFlammables(FireBlock.java:331) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.Bootstrap.initialize(Bootstrap.java:50) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.client.main.Main.lambda$main$0(Main.java:126) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A}
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?] {}
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?] {}
+Caused by: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Critical injection failure: @Inject annotation on fellter$stripMoss could not find any targets matching 'tryStrip' in net/minecraft/item/AxeItem. No refMap loaded. [INJECT_PREPARE Applicator Phase -> mossify.mixins.json:MixinAxeItem from mod mossify -> Prepare Injections -> handler$zzi000$mossify$fellter$stripMoss(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/block/BlockState;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V -> Parse ->  -> Validate Targets]
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.injection.selectors.TargetSelectors.validate(TargetSelectors.java:346) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.injection.struct.InjectionInfo.readAnnotation(InjectionInfo.java:369) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.injection.struct.InjectionInfo.<init>(InjectionInfo.java:340) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.injection.struct.InjectionInfo.<init>(InjectionInfo.java:331) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.injection.struct.CallbackInjectionInfo.<init>(CallbackInjectionInfo.java:48) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?] {}
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?] {}
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?] {}
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.injection.struct.InjectionInfo$InjectorEntry.create(InjectionInfo.java:196) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.injection.struct.InjectionInfo.parse(InjectionInfo.java:664) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinTargetContext.prepareInjections(MixinTargetContext.java:1399) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.prepareInjections(MixinApplicatorStandard.java:731) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyMixin(MixinApplicatorStandard.java:315) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.apply(MixinApplicatorStandard.java:246) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.TargetClassContext.apply(TargetClassContext.java:437) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.TargetClassContext.applyMixins(TargetClassContext.java:418) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:363) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:250) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.service.modlauncher.MixinTransformationHandler.processClass(MixinTransformationHandler.java:131) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.launch.MixinLaunchPluginLegacy.processClass(MixinLaunchPluginLegacy.java:131) ~[sponge-mixin-0.15.2+mixin.0.8.7.jar:0.15.2+mixin.0.8.7] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/cpw.mods.modlauncher.serviceapi.ILaunchPluginService.processClassWithFlags(ILaunchPluginService.java:152) ~[loader-9.0.16.jar:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/cpw.mods.modlauncher.LaunchPluginHandler.offerClassNodeToPlugins(LaunchPluginHandler.java:97) ~[loader-9.0.16.jar:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:133) ~[loader-9.0.16.jar:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/cpw.mods.modlauncher.TransformingClassLoader.maybeTransformClassBytes(TransformingClassLoader.java:54) ~[loader-9.0.16.jar:9.0] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.readerToClass(ModuleClassLoader.java:202) ~[securejarhandler-9.0.16.jar:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.lambda$findClass$20(ModuleClassLoader.java:310) ~[securejarhandler-9.0.16.jar:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.loadFromModule(ModuleClassLoader.java:323) ~[securejarhandler-9.0.16.jar:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.findClass(ModuleClassLoader.java:310) ~[securejarhandler-9.0.16.jar:?] {}
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.loadClass(ModuleClassLoader.java:226) ~[securejarhandler-9.0.16.jar:?] {}
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?] {}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.block.LightBlock.getOutlineShape(LightBlock.java:65) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.block.AbstractBlock$AbstractBlockState.getOutlineShape(AbstractBlock.java:677) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A,re:mixin,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.block.AbstractBlock$AbstractBlockState.getOutlineShape(AbstractBlock.java:673) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A,re:mixin,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.block.AbstractBlock.getCollisionShape(AbstractBlock.java:322) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:computing_frames,pl:accesstransformer:B,pl:unprotect:A,re:mixin,pl:accesstransformer:B,pl:unprotect:A,re:classloading,pl:accesstransformer:B,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.block.AbstractBlock$AbstractBlockState$ShapeCache.<init>(AbstractBlock.java:945) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.block.AbstractBlock$AbstractBlockState.initShapeCache(AbstractBlock.java:503) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A,re:mixin,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.block.Blocks.<clinit>(Blocks.java:7052) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.block.FireBlock.registerDefaultFlammables(FireBlock.java:331) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.Bootstrap.initialize(Bootstrap.java:50) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A}
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.client.main.Main.lambda$main$0(Main.java:126) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A}
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?] {}
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: main
+Stacktrace:
+	at MC-BOOTSTRAP/fml_loader@9.0.16/net.neoforged.fml.loading.BackgroundWaiter.runAndTick(BackgroundWaiter.java:29) ~[loader-9.0.16.jar%23120!/:9.0] {}
+-- Initialization --
+Details:
+	Modules: 
+		ADVAPI32.dll:Advanced Windows 32 Base API:10.0.26100.3624 (WinBuild.160101.0800):Microsoft Corporation
+		COMCTL32.dll:User Experience Controls Library:6.10 (WinBuild.160101.0800):Microsoft Corporation
+		CRYPT32.dll:Crypto API32:10.0.26100.2308 (WinBuild.160101.0800):Microsoft Corporation
+		CRYPTBASE.dll:Base cryptographic API DLL:10.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		CRYPTSP.dll:Cryptographic Service Provider API:10.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		CoreMessaging.dll:Microsoft CoreMessaging Dll:10.0.26100.4202 (WinBuild.160101.0800):Microsoft Corporation
+		CoreUIComponents.dll:Microsoft Core UI Components Dll:10.0.26100.4768:Microsoft Corporation
+		DBGHELP.DLL:Windows Image Helper:10.0.26100.4202 (WinBuild.160101.0800):Microsoft Corporation
+		DEVOBJ.dll:Device Information Set DLL:10.0.26100.1150 (WinBuild.160101.0800):Microsoft Corporation
+		DNSAPI.dll:DNS Client API DLL:10.0.26100.1591 (WinBuild.160101.0800):Microsoft Corporation
+		GDI32.dll:GDI Client DLL:10.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		GLU32.dll:OpenGL Utility Library DLL:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		IMM32.DLL:Multi-User Windows IMM32 API Client DLL:10.0.26100.4484 (WinBuild.160101.0800):Microsoft Corporation
+		IPHLPAPI.DLL:IP Helper API:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		KERNEL32.DLL:Windows NT BASE API Client DLL:10.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		KERNELBASE.dll:Windows NT BASE API Client DLL:10.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		MSASN1.dll:ASN.1 Runtime APIs:10.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		MSCTF.dll:MSCTF Server DLL:10.0.26100.2308 (WinBuild.160101.0800):Microsoft Corporation
+		NSI.dll:NSI User-mode interface DLL:10.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		OLEAUT32.dll:OLEAUT32.DLL:10.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		Ole32.dll:Microsoft OLE for Windows:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		POWRPROF.dll:Power Profile Helper DLL:10.0.26100.4202 (WinBuild.160101.0800):Microsoft Corporation
+		PSAPI.DLL:Process Status Helper:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		RPCRT4.dll:Remote Procedure Call Runtime:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		SETUPAPI.dll:Windows Setup API:10.0.26100.2308 (WinBuild.160101.0800):Microsoft Corporation
+		SHCORE.dll:SHCORE:10.0.26100.2308 (WinBuild.160101.0800):Microsoft Corporation
+		SHELL32.dll:Windows Shell Common Dll:10.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		UMPDC.dll:User Mode Power Dependency Coordinator:10.0.26100.1301 (WinBuild.160101.0800):Microsoft Corporation
+		USER32.dll:Multi-User Windows USER API Client DLL:10.0.26100.2308 (WinBuild.160101.0800):Microsoft Corporation
+		USERENV.dll:Userenv:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		VCRUNTIME140.dll:Microsoft® C Runtime Library:14.31.31103.0:Microsoft Corporation
+		VERSION.dll:Version Checking and File Installation Libraries:10.0.26100.1150 (WinBuild.160101.0800):Microsoft Corporation
+		WINHTTP.dll:Windows HTTP Services:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		WINMM.dll:MCI API DLL:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		WINTRUST.dll:Microsoft Trust Verification APIs:10.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		WS2_32.dll:Windows Socket 2.0 32-Bit DLL:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		amdihk64.dll:Radeon Settings: Host Service:2,00,00,1788:Advanced Micro Devices, Inc.
+		amsi.dll:Anti-Malware Scan Interface:10.0.26100.1150 (WinBuild.160101.0800):Microsoft Corporation
+		apphelp.dll:Application Compatibility Client Library:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		aswAMSI.dll:Avast AMSI COM object:25.7.10308.0:Gen Digital Inc.
+		aswhook.dll:Avast Hook Library:25.7.10308.0:Gen Digital Inc.
+		atig6pxx.dll:atiglpxx.dll:8.14.01.6564:Advanced Micro Devices, Inc. 
+		atio6axx.dll:AMD OpenGL Driver:25.06.230729_569461f:Advanced Micro Devices, Inc
+		awt.dll:Java(TM) Platform SE binary:21.0.2.0:Oracle Corporation
+		bcrypt.dll:Windows Cryptographic Primitives Library:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		bcryptPrimitives.dll:Windows Cryptographic Primitives Library:10.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		cfgmgr32.dll:Configuration Manager DLL:10.0.26100.4202 (WinBuild.160101.0800):Microsoft Corporation
+		clbcatq.dll:COM+ Configuration Catalog:2001.12.10941.16384 (WinBuild.160101.0800):Microsoft Corporation
+		combase.dll:Microsoft COM for Windows:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		dbgcore.DLL:Windows Core Debugging Helpers:10.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		dinput8.dll:Microsoft DirectInput:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		directxdatabasehelper.dll:DirectXDatabaseHelper:10.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		dwmapi.dll:Microsoft Desktop Window Manager API:10.0.26100.2308 (WinBuild.160101.0800):Microsoft Corporation
+		dxcore.dll:DXCore:10.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		fwpuclnt.dll:FWP/IPsec User-Mode API:10.0.26100.3915 (WinBuild.160101.0800):Microsoft Corporation
+		gdi32full.dll:GDI Client DLL:10.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		glfw.dll:GLFW 3.4.0 DLL:3.4.0:GLFW
+		icm32.dll:Microsoft Color Management Module (CMM):10.0.26100.2314 (WinBuild.160101.0800):Microsoft Corporation
+		inputhost.dll:InputHost:10.0.26100.4946 (WinBuild.160101.0800):Microsoft Corporation
+		instrument.dll:Java(TM) Platform SE binary:21.0.2.0:Oracle Corporation
+		java.dll:Java(TM) Platform SE binary:21.0.2.0:Oracle Corporation
+		java.exe:Java(TM) Platform SE binary:21.0.2.0:Oracle Corporation
+		jemalloc.dll
+		jimage.dll:Java(TM) Platform SE binary:21.0.2.0:Oracle Corporation
+		jli.dll:Java(TM) Platform SE binary:21.0.2.0:Oracle Corporation
+		jna12176158536052825895.dll:JNA native library:7.0.2:Java(TM) Native Access (JNA)
+		jsvml.dll:Java(TM) Platform SE binary:21.0.2.0:Oracle Corporation
+		jvm.dll:Java HotSpot(TM) 64-Bit server VM:21.0.2.0:Oracle Corporation
+		kernel.appcore.dll:AppModel API Host:10.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		lwjgl.dll
+		lwjgl_opengl.dll
+		lwjgl_stb.dll
+		management.dll:Java(TM) Platform SE binary:21.0.2.0:Oracle Corporation
+		management_ext.dll:Java(TM) Platform SE binary:21.0.2.0:Oracle Corporation
+		mscms.dll:Microsoft Colour Matching System DLL:10.0.26100.2308 (WinBuild.160101.0800):Microsoft Corporation
+		msvcp140.dll:Microsoft® C Runtime Library:14.31.31103.0:Microsoft Corporation
+		msvcp_win.dll:Microsoft® C Runtime Library:10.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		msvcrt.dll:Windows NT CRT DLL:7.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		mswsock.dll:Microsoft Windows Sockets 2.0 Service Provider:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		napinsp.dll:E-mail Naming Shim Provider:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		net.dll:Java(TM) Platform SE binary:21.0.2.0:Oracle Corporation
+		nio.dll:Java(TM) Platform SE binary:21.0.2.0:Oracle Corporation
+		nlansp_c.dll:NLA Namespace Service Provider DLL:10.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		ntdll.dll:NT Layer DLL:10.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		opengl32.dll:OpenGL Client DLL:10.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		pdh.dll:Windows Performance Data Helper DLL:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		perfos.dll:Windows System Performance Objects DLL:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		perfproc.dll:Windows System Process Performance Objects DLL:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		pfclient.dll:SysMain Client:10.0.26100.4202 (WinBuild.160101.0800):Microsoft Corporation
+		profapi.dll:User Profile Basic API:10.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		rasadhlp.dll:Remote Access AutoDial Helper:10.0.26100.1150 (WinBuild.160101.0800):Microsoft Corporation
+		rsaenh.dll:Microsoft Enhanced Cryptographic Provider:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		sechost.dll:Host for SCM/SDDL/LSA Lookup APIs:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		shlwapi.dll:Shell Light-weight Utility Library:10.0.26100.2308 (WinBuild.160101.0800):Microsoft Corporation
+		textinputframework.dll:"TextInputFramework.DYNLINK":10.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		ucrtbase.dll:Microsoft® C Runtime Library:10.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		uxtheme.dll:Microsoft UxTheme Library:10.0.26100.2308 (WinBuild.160101.0800):Microsoft Corporation
+		vcruntime140_1.dll:Microsoft® C Runtime Library:14.31.31103.0:Microsoft Corporation
+		verify.dll:Java(TM) Platform SE binary:21.0.2.0:Oracle Corporation
+		win32u.dll:Win32u:10.0.26100.4946 (WinBuild.160101.0800):Microsoft Corporation
+		windows.staterepositorycore.dll:Windows StateRepository API Core:10.0.26100.4768 (WinBuild.160101.0800):Microsoft Corporation
+		windows.storage.dll:Microsoft WinRT Storage API:10.0.26100.2308 (WinBuild.160101.0800):Microsoft Corporation
+		winrnr.dll:LDAP RnR Provider DLL:10.0.26100.1882 (WinBuild.160101.0800):Microsoft Corporation
+		wintypes.dll:Windows Base Types DLL:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		wshbth.dll:Windows Sockets Helper DLL:10.0.26100.4061 (WinBuild.160101.0800):Microsoft Corporation
+		xinput1_4.dll:Microsoft Common Controller API:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		zip.dll:Java(TM) Platform SE binary:21.0.2.0:Oracle Corporation
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21.8/net.minecraft.client.main.Main.main(Main.java:126) ~[neoforge-21.8.32-minecraft-merged-1.21.8-loom.mappings.1_21_8.layered+hash.2093658417-v2-neoforge-21.8.32.jar%23221!/:?] {re:classloading,pl:unprotect:A}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/net.neoforged.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:132) ~[loader-9.0.16.jar%23120!/:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/net.neoforged.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:120) ~[loader-9.0.16.jar%23120!/:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/net.neoforged.fml.loading.targets.NeoForgeClientDevLaunchHandler.runService(NeoForgeClientDevLaunchHandler.java:49) ~[loader-9.0.16.jar%23120!/:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/net.neoforged.fml.loading.targets.CommonLaunchHandler.lambda$launchService$4(CommonLaunchHandler.java:114) ~[loader-9.0.16.jar%23120!/:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:25) [loader-9.0.16.jar%23120!/:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:55) [loader-9.0.16.jar%23120!/:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:73) [loader-9.0.16.jar%23120!/:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/cpw.mods.modlauncher.Launcher.run(Launcher.java:104) [loader-9.0.16.jar%23120!/:9.0] {}
+	at MC-BOOTSTRAP/fml_loader@9.0.16/cpw.mods.modlauncher.Launcher.main(Launcher.java:75) [loader-9.0.16.jar%23120!/:9.0] {}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:203) [bootstraplauncher-9.0.16.jar:9.0] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:62) [bootstraplauncher-9.0.16.jar:9.0] {}
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) [dev-launch-injector-0.2.1+build.8.jar:?] {}
+	at dev.architectury.transformer.TransformerRuntime.main(TransformerRuntime.java:220) [architectury-transformer-5.2.87-runtime.jar:5.2.87] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.8
+	Minecraft Version ID: 1.21.8
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 21.0.2, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 1187824456 bytes (1132 MiB) / 1864368128 bytes (1778 MiB) up to 4135583744 bytes (3944 MiB)
+	CPUs: 12
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 5 7530U with Radeon Graphics         
+	Identifier: AuthenticAMD Family 25 Model 80 Stepping 0
+	Microarchitecture: Zen 3
+	Frequency (GHz): 2.00
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: AMD Radeon (TM) Graphics
+	Graphics card #0 vendor: Advanced Micro Devices, Inc.
+	Graphics card #0 VRAM (MiB): 512.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 31.0.21923.11000
+	Memory slot #0 capacity (MiB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 3.20
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MiB): 8192.00
+	Memory slot #1 clockSpeed (GHz): 3.20
+	Memory slot #1 type: DDR4
+	Virtual memory max (MiB): 26013.37
+	Virtual memory used (MiB): 23227.34
+	Swap memory total (MiB): 10240.00
+	Swap memory used (MiB): 1658.33
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 228642.09, total: 486998.31
+	Space in storage for workdir (MiB): available: 228642.09, total: 486998.31
+	JVM Flags: 0 total; 
+	Launched Version: 21.8.32
+	Backend library: LWJGL version 3.3.3+5
+	Backend API: Unknown
+	Window size: <not initialized>
+	GFLW Platform: win32
+	Render Extensions: ERR
+	GL debug messages: <no renderer available>
+	Is Modded: Definitely; Client brand changed to 'neoforge'
+	Universe: 404
+	Type: Client (map_client.txt)
+	Locale: en_GB
+	System encoding: Cp1252
+	File encoding: UTF-8
+	CPU: 12x AMD Ryzen 5 7530U with Radeon Graphics 

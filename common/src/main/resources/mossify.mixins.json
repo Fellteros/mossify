@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "net.fellter.mossify.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "minVersion": "0.8",
+  "client": [
+  ],
+  "mixins": [
+    "MixinAxeItem",
+    "MixinBlockItem"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
