@@ -4,9 +4,11 @@
 /common/.gradle/
 /common/build/
 /common/build/classes/java/main/
+/fabric/run/
 /fabric/.gradle/
 /fabric/build/
 /fabric/build/classes/java/main/
+/neoforge/run/
 /neoforge/.gradle/
 /neoforge/build/
 /neoforge/build/classes/java/main/
