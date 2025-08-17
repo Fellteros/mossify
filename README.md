@@ -1,0 +1,1 @@
+<a href="https://github.com/Fellteros/mossify">Mossify</a> © 2025 by <a href="https://github.com/Fellteros">Fellter</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
