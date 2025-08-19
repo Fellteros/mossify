@@ -3,6 +3,10 @@ package net.fellter.mossify.mixin;
 import java.util.Map;
 import java.util.Optional;
 
+import com.llamalad7.mixinextras.expression.Definition;
+import com.llamalad7.mixinextras.expression.Expression;
+import com.llamalad7.mixinextras.sugar.Local;
+
 import net.fellter.mossify.MossifiableBlockRegistry;
 
 import net.minecraft.advancement.criterion.Criteria;
@@ -45,7 +49,11 @@ public abstract class MixinAxeItem extends Item {
 		super(settings);
 	}
 
-	@Inject(method = "useOnBlock", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemUsageContext;getPlayer()Lnet/minecraft/entity/player/PlayerEntity;"), cancellable = true)
+	@Definition(id = "getPlayer", method = "Lnet/minecraft/item/ItemUsageContext;getPlayer()Lnet/minecraft/entity/player/PlayerEntity;")
+	@Definition(id = "context", local = @Local(type = ItemUsageContext.class, argsOnly = true))
+	@Definition(id = "playerEntity", local = @Local(type = PlayerEntity.class))
+	@Expression("playerEntity = context.getPlayer()")
+	@Inject(method = "useOnBlock", at = @At(value = "MIXINEXTRAS:EXPRESSION", shift = At.Shift.AFTER), cancellable = true)
 	private void fellter$useOnBlock(ItemUsageContext context, CallbackInfoReturnable<ActionResult> cir) {
 		Optional<BlockState> optional = fellter$getOptional(context.getWorld().getBlockState(context.getBlockPos()));
 		World world = context.getWorld();

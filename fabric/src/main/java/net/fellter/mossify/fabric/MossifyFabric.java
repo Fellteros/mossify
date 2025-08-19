@@ -9,5 +9,6 @@ public final class MossifyFabric implements ModInitializer {
 	public void onInitialize() {
 		Mossify.init();
 		Mossify.LOGGER.info("Initialized Mossify on Fabric");
+
 	}
 }
